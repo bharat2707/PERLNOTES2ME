@@ -61,4 +61,36 @@ use strict;
 #While going through these things also go through perl special variables like $_, $^O, $- and so on..Link to this is 
 #https://www.tutorialspoint.com/perl/perl_special_variables.htm
 
+my $pan = 'awert1234q';
+$pan = uc($pan);
+print "$pan\n";
+#Similarly check out for lower case (lc)..
+
+print "ERROR: PAN is invalid\n" if ($pan !~ /^\s*[a-z]{5}\d{4}[a-z]{1}\s*$/i);
+#First we assign a value to PAN(Permanent Account Number). Then we can use validation check to see if PAN is valid or not..
+#We have introduced few regex (Regular Expressions) while doing it..Identify each of them and understand there functionality.
+#Also come up with examples with more regex usage.
+
+
+my $str = "How do you do do do??";
+
+my @do_count = $str =~ /do/isg;
+
+print @do_count."\n";
+
+#Above example gives you number of count of a letter..Practise few of them on your own to get hold of regex concepts.
+#If you have gone through step wise you will know the use of strings, arrays used above..You can try the same using split function..DIY
+#(Do it Yourself) exercise.
+
+
+$str = "Check Number is 1234567 and count some random number is 89";
+
+if ($str =~ /^.*?\s+(\d{4,7})\s+.*?(\d{2})\s*$/) {
+    my $cheque_num = $1;
+    print $cheque_num."\n";
+}
+
+#Above is an example where for number regex can be applied..
+#We have used one of perl special variable above $1 which stores the data..Similarly you can use from $1..$9
+#Explore few more examples on your own and add them here with regex.
 

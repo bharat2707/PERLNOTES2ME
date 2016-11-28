@@ -1,3 +1,4 @@
+#After going through the material try this exercise.
 #Programatically obtain Money Control website: Login->Scrape data->Logout.
 
 #Link to money control : 'http://www.moneycontrol.com/'
